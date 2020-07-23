@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="{% url 'update_profile' %}"  method="post">
+    {% csrf_token %}
+    <table align="center", border="1">
+        <tr>
+            <th colspan="2">update  Page</th>
+        </tr>
+        <tr>
+            <td colspan="2" >
+                <input  type="text"  value="{{username}}" name="username"  readonly>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="text" value="{{first_name}}" name="first_name" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" value="{{last_name}}" name="last_name" required>
+            </td>
+        </tr>
+
+
+        <tr>
+            <th colspan="2">
+                <button type="submit">Update</button>
+            </th>
+        </tr>
+
+    </table>
+</form>
+<h4 align="center" style="color: green">{{ message }}</h4>
+
+
+</body>
+</html>

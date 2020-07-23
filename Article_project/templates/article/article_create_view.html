@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    <table align="center" border="1">
+         <tr>
+            <th colspan="2">Create Article</th>
+        </tr>
+        <tr>
+            <td>Author</td>
+            <td>{{form.author}}</td>
+        </tr>
+
+       <tr>
+           <td>Topic</td>
+           <td>{{form.topic}}</td>
+       </tr>
+        <tr>
+            <td>Title</td>
+            <td>{{form.title}}</td>
+        </tr>
+        <tr>
+            <td>Data</td>
+            <td>{{form.data}}</td>
+        </tr>
+        <tr>
+            <th align="center" colspan="2"> <button type="submit">SUBMIT</button></th>
+        </tr>
+    </table>
+
+
+
+
+</form>
+</body>
+</html>

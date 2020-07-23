@@ -1,0 +1,6 @@
+<h3>View Profile</h3>
+<form method="post" action="{% url 'profile_edit' %}">
+    {% csrf_token %}
+    <p>email : <input type="email" placeholder="enter email id" name="email"></p>
+    <button type="submit">Submit</button>
+</form>

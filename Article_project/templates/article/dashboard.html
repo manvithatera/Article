@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Dashboard</h1>
+<form action="/login_post_view/" method="post">
+    {% csrf_token %}
+    <input type="submit" align="center" value="Create post">
+</form>
+
+<ul>
+{% for article in object_list %}
+    <li><h3>author:</h3>{{article.author}}</li>
+    <li><h3>topic: </h3> {{artilce.topic}}</li>
+    <li><h3>title:</h3>{{article.title}}</li>
+    <li><h3>data:</h3>{{article.data}}</li>
+    <li><h3>created_on: </h3>{{article.created_on}}</li>
+    <li>-------------------------------------------------------</li>
+{% empty %}
+    <li>No posts yet.</li>
+{% endfor %}
+</ul>
+
+</body>
+</html>
+
