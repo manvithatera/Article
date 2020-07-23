@@ -5,16 +5,16 @@
     <title>Home</title>
 </head>
 <body>
-<form method="post">
+<form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     <table align="center" border="1">
          <tr>
             <th colspan="2">Create Article</th>
         </tr>
-        <tr>
-            <td>Author</td>
-            <td>{{form.author}}</td>
-        </tr>
+        <!--<tr>-->
+            <!--<td>Author</td>-->
+            <!--<td>{{form.author}}</td>-->
+        <!--</tr>-->
 
        <tr>
            <td>Topic</td>

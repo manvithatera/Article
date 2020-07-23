@@ -21,14 +21,14 @@ from app_article import views
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('article_list/', views.ArticleList.as_view()),
-    path('article_preview/<int:pk>/', views.ArticlePreView.as_view(), name ='article_preview'),
-    path('article_create/', views.ArticleCreateView.as_view(), name='article_create'),
-
-    path('author_filter_list/', views.AuthorFilter),
-
-    path('article/update/<int:pk>/', views.ArticleUpdate.as_view(),name='article_update'),
-    path('article/delete/<int:pk>/', views.ArticleDelete.as_view(),name='article_delete'),
+    # path('article_list/', views.ArticleList.as_view()),
+    # path('article_preview/<int:pk>/', views.ArticlePreView.as_view(), name ='article_preview'),
+    # path('article_create/', views.ArticleCreateView.as_view(), name='article_create'),
+    #
+    # path('author_filter_list/', views.AuthorFilter),
+    #
+    # path('article/update/<int:pk>/', views.ArticleUpdate.as_view(),name='article_update'),
+    # path('article/delete/<int:pk>/', views.ArticleDelete.as_view(),name='article_delete'),
 
 
     path('/', views.IndexView.as_view()),
@@ -43,7 +43,5 @@ urlpatterns = [
     path('profile_view/', views.ProfileView.as_view(), name='profile_view'),
     path('profile_edit/', views.ProfileEditView.as_view(), name='profile_edit'),
     path('update_profile/', views.UpdateProfile.as_view(), name='update_profile'),
-
-    path('dashboard/', views.Dashboard.as_view(), name ='dashboard'),
 
 ]
